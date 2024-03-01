@@ -1,0 +1,60 @@
+body {
+  background-color: rgba(145, 142, 142, 0.147);
+}
+.weather-form {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(1, 29, 29, 0.199);
+  padding: 2rem;
+  border-radius: 10px;
+}
+.form-tag {
+  height: 5vh;
+  width: 15vw;
+  display: block;
+  border: 2px solid rgba(1, 29, 29, 0.645);
+  padding: 0rem 0.5rem;
+  border-radius: 3px;
+}
+.button {
+  margin-top: 1rem;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+  background: white;
+  color: black;
+  cursor: pointer;
+}
+.button:hover {
+  transform: scale(1.05);
+  font-weight: bold;
+  transition-duration: 250ms;
+}
+.weather-display {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  border: 2px solid black;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.city {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.description {
+  font-style: italic;
+}
+.search-again {
+  margin-top: 10px;
+  color: white;
+  background: black;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+}

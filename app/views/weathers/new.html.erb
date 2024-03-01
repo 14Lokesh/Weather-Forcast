@@ -1,0 +1,7 @@
+<div class="weather-form">
+  <h1>Enter City</h1>
+  <%= form_with url: weathers_path, method: :post, local: true do |form| %>
+    <%= form.text_field :city, class: 'form-tag', placeholder: 'Enter city name' %>
+    <%= form.submit "Search", class: 'button' %>
+  <% end %>
+</div>

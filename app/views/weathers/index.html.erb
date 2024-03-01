@@ -1,0 +1,14 @@
+<div class="weather-display">
+  <% if @weather && @weather['cod'] == 200 %>
+    <p class="city">Current Weather in <%= params[:city] %></p>
+    <p class="description"><strong>Sky: </strong><%= @weather['weather'][0]['description'] %></p>
+    <p class="temperature"><strong>Temperature:</strong> <%= (@weather['main']['temp']- 273.15).round(1) %>°C</p>
+    <p class="feels-like"><strong>Feels like:</strong> <%= (@weather['main']['feels_like']- 273.15).round(1) %>°C</p>
+    <p class="temp-min"><strong>Min Temp:</strong> <%= (@weather['main']['temp_min']- 273.15).round(1) %>°C</p>
+    <p class="temp-max"><strong>Max Temp:</strong> <%= (@weather['main']['temp_max']- 273.15).round(1) %>°C</p>
+    <p class="humidity"><strong>Humidity: </strong><%= @weather['main']['humidity'] %></p>
+  <% else %>
+    <p >Sorry, weather data for <%= params[:city] %> is not available.</p>
+  <% end %>
+<%= link_to 'Search Again', new_weather_path, class: "search-again" %>
+</div>
